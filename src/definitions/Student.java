@@ -10,10 +10,33 @@ public class Student {
     private String studentFirstName;
     private String studentMiddleName;
     private String studentLastName;
-
     private long univRollNo;
     private int issuedBookNumbers;
     private Book[] booksIssued;
+
+    public String getStudentFirstName() {
+        return studentFirstName;
+    }
+
+    public void setStudentFirstName(String studentFirstName) {
+        this.studentFirstName = studentFirstName;
+    }
+
+    public String getStudentMiddleName() {
+        return studentMiddleName;
+    }
+
+    public void setStudentMiddleName(String studentMiddleName) {
+        this.studentMiddleName = studentMiddleName;
+    }
+
+    public String getStudentLastName() {
+        return studentLastName;
+    }
+
+    public void setStudentLastName(String studentLastName) {
+        this.studentLastName = studentLastName;
+    }
 
     public long getUnivRollNo() {
         return univRollNo;

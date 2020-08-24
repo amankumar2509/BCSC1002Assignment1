@@ -62,5 +62,12 @@ public class Student {
         this.booksIssued = booksIssued;
     }
 
-
+    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers, Book[] booksIssued) {
+        this.studentFirstName = studentFirstName;
+        this.studentMiddleName = studentMiddleName;
+        this.studentLastName = studentLastName;
+        this.univRollNo = univRollNo;
+        this.issuedBookNumbers = issuedBookNumbers;
+        this.booksIssued = booksIssued;
+    }
 }

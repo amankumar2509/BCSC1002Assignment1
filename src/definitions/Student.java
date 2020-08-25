@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private String studentFirstName;
     private String studentMiddleName;
@@ -54,20 +56,28 @@ public class Student {
         this.issuedBookNumbers = issuedBookNumbers;
     }
 
-    public Book[] getBooksIssued() {
-        return booksIssued;
+    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers) {
+        this.studentFirstName = studentFirstName;
+        this.studentMiddleName = studentMiddleName;
+        this.studentLastName = studentLastName;
+        this.univRollNo = univRollNo;
+        this.issuedBookNumbers = issuedBookNumbers;
     }
 
     public void setBooksIssued(Book[] booksIssued) {
         this.booksIssued = booksIssued;
     }
 
-    public Student(String studentFirstName, String studentMiddleName, String studentLastName, long univRollNo, int issuedBookNumbers, Book[] booksIssued) {
-        this.studentFirstName = studentFirstName;
-        this.studentMiddleName = studentMiddleName;
-        this.studentLastName = studentLastName;
-        this.univRollNo = univRollNo;
-        this.issuedBookNumbers = issuedBookNumbers;
+    public Student(Book[] booksIssued) {
         this.booksIssued = booksIssued;
+    }
+
+    public Book[] getBooksIssued() {
+        return booksIssued.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "studentFirstName='" + studentFirstName + '\'' + ", studentMiddleName='" + studentMiddleName + '\'' + ", studentLastName='" + studentLastName + '\'' + ", univRollNo=" + univRollNo + ", issuedBookNumbers=" + issuedBookNumbers + ", booksIssued=" + Arrays.toString(booksIssued) + '}';
     }
 }

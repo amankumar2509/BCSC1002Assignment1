@@ -23,7 +23,16 @@ public class Library {
      * @param name The name of book you want to returned
      */
     public void returnPreviousBook(String name) {
-        System.out.println("Your book has been return");
+        System.out.println("Your book" + name + " has been return");
+    }
+
+    /**
+     * This method shows list of all books that has been issued by you
+     *
+     * @param names names of all issue book
+     */
+    public void myIssueBook(String[] names) {
+        System.out.println("list of all books that you have been issue");
     }
 
 

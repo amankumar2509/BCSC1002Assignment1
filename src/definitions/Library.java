@@ -7,8 +7,14 @@
 package definitions;
 
 public class Library {
+    /**
+     * This method helps us to issue new book
+     *
+     * @param name The name of the book you want to issue
+     */
 
-    public void bookName(String name) {
+    public void AddBookName(String name) {
+        System.out.println("The book" + name + " has been issued to you");
     }
 
 

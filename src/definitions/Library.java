@@ -7,4 +7,9 @@
 package definitions;
 
 public class Library {
+
+    public void bookName(String name) {
+    }
+
+
 }

@@ -7,13 +7,23 @@
 package definitions;
 
 public class Library {
+    private Book[] bookIssued;
+
+    public Library() {
+        this.bookIssued = new Book[5];
+        for (int i = 0; i < bookIssued.length; i++) {
+            bookIssued[i] = new Book("Book " + (i + 1));
+
+        }
+    }
+
     /**
      * This method helps us to issue new book
      *
      * @param name The name of the book you want to issue
      */
 
-    public void AddBookName(String name) {
+    public void addBookName(String name) {
         System.out.println("The book" + name + " has been issued to you");
     }
 
@@ -26,13 +36,11 @@ public class Library {
         System.out.println("Your book" + name + " has been return");
     }
 
-    /**
-     * This method shows list of all books that has been issued by you
-     *
-     * @param names names of all issue book
-     */
-    public void myIssueBook(String[] names) {
-        System.out.println("list of all books that you have been issue");
+    public void list() {
+        for (Book book : bookIssued) {
+            System.out.println(book);
+
+        }
     }
 
 

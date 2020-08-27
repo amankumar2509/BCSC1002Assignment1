@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Aman Kumar (dbc2201)
+ *  Date: 26/08/20
+ *  Time: 6:50 PM
  *  File Name : FrontDesk.java
  * */
 package execution;
@@ -19,22 +19,23 @@ public class FrontDesk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int studentInput;
-        System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
-        System.out.println("How may I help ypu today?");
-        System.out.println("Issue a new book for me");
-        System.out.println("Return previously issuesd book for me.");
-        System.out.println("Show me all my isuue book");
-        System.out.println("Exit");
-        studentInput = scanner.nextInt();
-        Library myBook = new Library();
-        String bookName;
         do {
+            System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
+            System.out.println(".How may I help you today?");
+            System.out.println("1.Issue a new book for me");
+            System.out.println("2.Return previously issuesd book for me.");
+            System.out.println("3.Show me all my isuue book");
+            System.out.println("4.Exit");
+            studentInput = scanner.nextInt();
+            Library myBook = new Library();
+            String bookName;
+
             switch (studentInput) {
                 case ISSUE_NEW_BOOK:
                     System.out.println("Enter the name of the book you want to issue");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
-                    myBook.AddBookName(bookName);
+                    myBook.addBookName(bookName);
                     break;
                 case RETURN_BOOK:
                     System.out.println("Enter the name of book you want return");
@@ -43,10 +44,18 @@ public class FrontDesk {
                     myBook.returnPreviousBook(bookName);
                     break;
                 case ISSUED_BOOK:
-                    System.out.println("list of books that have been issued");
-                    myBook.myIssueBook(myBook);
+                    System.out.println("list of books that have been issued by you");
+                    myBook.list();
+                    break;
+                case EXIT:
+                    System.out.println("EXIT");
+                    break;
+                default:
+                    System.out.println("wrong choice");
+                    break;
             }
-        }
+        } while (studentInput != EXIT);
+        scanner.close();
 
 
     }

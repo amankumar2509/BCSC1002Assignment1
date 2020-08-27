@@ -37,10 +37,10 @@ public class Book {
         this.isbnNumber = isbnNumber;
     }
 
-    public Book(String bookName, String authorName, String isbnNumber) {
+    public Book(String bookName) {
         this.bookName = bookName;
-        this.authorName = authorName;
-        this.isbnNumber = isbnNumber;
+        this.authorName = "unknown";
+        this.isbnNumber = "unknown";
     }
 
     @Override

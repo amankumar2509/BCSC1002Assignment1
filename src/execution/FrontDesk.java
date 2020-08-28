@@ -7,6 +7,7 @@
 package execution;
 
 import definitions.Library;
+import definitions.Student;
 
 import java.util.Scanner;
 
@@ -28,10 +29,13 @@ public class FrontDesk {
             System.out.println("4.Exit");
             studentInput = scanner.nextInt();
             Library myBook = new Library();
+            Student student = new Student();
             String bookName;
 
             switch (studentInput) {
                 case ISSUE_NEW_BOOK:
+                    System.out.println("Student Detail");
+                    student.studentDetails();
                     System.out.println("Enter the name of the book you want to issue");
                     scanner.nextLine();
                     bookName = scanner.nextLine();

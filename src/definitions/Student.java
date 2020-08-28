@@ -1,13 +1,14 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:49 PM
+ *  User: Aman Kumar (amankumar 2509)
+ *  Date: 23/08/20
+ *  Time: 7:30 PM
  *  File Name : Student.java
  * */
 package definitions;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Student {
     private String studentFirstName;
@@ -16,6 +17,10 @@ public class Student {
     private long univRollNo;
     private int issuedBookNumbers;
     private Book[] booksIssued;
+
+    public Student() {
+
+    }
 
     public String getStudentFirstName() {
         return studentFirstName;
@@ -102,5 +107,21 @@ public class Student {
         int result = Objects.hash(studentFirstName, studentMiddleName, studentLastName, univRollNo, issuedBookNumbers);
         result = 31 * result + Arrays.hashCode(booksIssued);
         return result;
+    }
+
+    public void studentDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter first name");
+        studentFirstName = scanner.nextLine();
+        System.out.println("enter middle name");
+        studentMiddleName = scanner.nextLine();
+        System.out.println("enter last name");
+        studentLastName = scanner.nextLine();
+        System.out.println("enter the university roll number");
+        univRollNo = scanner.nextLong();
+        System.out.println("your full name is:" + " " + studentFirstName + " " + studentMiddleName + " " + studentLastName);
+        System.out.println("your university roll number is:" + univRollNo);
+
+
     }
 }

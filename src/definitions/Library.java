@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Aman Kumar (amankumar 2509)
+ *  Date: 25/08/20
+ *  Time: 6:30 PM
  *  File Name : Library.java
  * */
 package definitions;
@@ -24,7 +24,7 @@ public class Library {
      */
 
     public void addBookName(String name) {
-        System.out.println("The book" + name + " has been issued to you");
+        System.out.println("The book" + " " + name + " has been issued to you");
     }
 
     /**
@@ -33,7 +33,7 @@ public class Library {
      * @param name The name of book you want to returned
      */
     public void returnPreviousBook(String name) {
-        System.out.println("Your book" + name + " has been return");
+        System.out.println("Your book :" + " " + name + " has been return");
     }
 
     public void list() {

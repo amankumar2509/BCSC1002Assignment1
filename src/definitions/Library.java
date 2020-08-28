@@ -36,6 +36,21 @@ public class Library {
         return "Library{" + "bookIssued=" + Arrays.toString(bookIssued) + '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Library library = (Library) o;
+        return Arrays.equals(bookIssued, library.bookIssued);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(bookIssued);
+    }
+
     /**
      * This method helps us to issue new book
      *

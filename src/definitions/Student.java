@@ -109,6 +109,10 @@ public class Student {
         return result;
     }
 
+    /**
+     * This method are used for getting student detail
+     */
+
     public void studentDetails() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter first name");
